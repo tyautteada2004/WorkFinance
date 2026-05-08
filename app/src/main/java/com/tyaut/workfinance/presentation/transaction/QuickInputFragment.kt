@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import com.google.android.material.chip.Chip
 import com.tyaut.workfinance.R
 import com.tyaut.workfinance.databinding.FragmentQuickInputBinding
+import com.tyaut.workfinance.domain.enums.AccountType
 import com.tyaut.workfinance.domain.enums.ExpenseCategory
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -49,7 +50,9 @@ class QuickInputFragment : Fragment() {
             val amountText = binding.etAmount.text.toString()
             val amount = amountText.toLongOrNull() ?: return@setOnClickListener
             val description = binding.etDescription.text.toString().ifBlank { selectedCategory.displayName }
-            val accountId = viewModel.accounts.value.firstOrNull()?.id ?: return@setOnClickListener
+            val accountId = viewModel.accounts.value
+                .firstOrNull { it.type != AccountType.CREDIT_CARD }?.id
+                ?: return@setOnClickListener
 
             viewModel.addExpense(accountId, amount, selectedCategory, description)
             clearInput()

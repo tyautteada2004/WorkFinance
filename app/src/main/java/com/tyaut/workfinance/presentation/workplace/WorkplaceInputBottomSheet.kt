@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.snackbar.Snackbar
 import com.tyaut.workfinance.data.db.entity.AccountEntity
 import com.tyaut.workfinance.data.db.entity.WorkplaceEntity
 import com.tyaut.workfinance.databinding.BottomSheetWorkplaceInputBinding
@@ -110,7 +111,14 @@ class WorkplaceInputBottomSheet : BottomSheetDialogFragment() {
     private fun onSaveClick() {
         val name = binding.etName.text.toString().trim()
         if (name.isBlank()) { binding.etName.error = "勤務先名を入力してください"; return }
-        if (selectedDepositAccountId < 0) return
+        if (selectedDepositAccountId < 0) {
+            Snackbar.make(
+                requireView(),
+                "振込先口座がありません。先に「口座」タブで銀行口座を作成してください。",
+                Snackbar.LENGTH_LONG
+            ).show()
+            return
+        }
 
         val isHourly = binding.rbHourly.isChecked
         val wageAmount = binding.etWage.text.toString().toLongOrNull() ?: 0L
