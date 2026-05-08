@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--
+        Android 15（API 35）では targetSdk=35 のアプリに edge-to-edge が強制される。
+        このスタイルでオプトアウトし、従来どおりシステムバー分の余白を確保する。
+    -->
     <style name="Theme.WorkFinance" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorOnPrimary">@color/colorOnPrimary</item>
@@ -9,12 +13,12 @@
         <item name="android:colorBackground">@color/colorBackground</item>
         <item name="colorSurface">@color/colorSurface</item>
         <item name="colorError">@color/colorError</item>
-        <!-- ステータスバー: primaryカラー背景 + 白アイコン -->
         <item name="android:statusBarColor">@color/colorPrimary</item>
         <item name="android:windowLightStatusBar">false</item>
-        <!-- ナビゲーションバー: 画面背景と統一 -->
         <item name="android:navigationBarColor">@color/colorBackground</item>
         <item name="android:windowLightNavigationBar">true</item>
+        <!-- API 35 の強制 edge-to-edge をオプトアウト -->
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
     </style>
 
 </resources>
