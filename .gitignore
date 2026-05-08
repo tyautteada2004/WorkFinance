@@ -1,0 +1,31 @@
+# Android ビルド成果物
+/build/
+app/build/
+
+# Gradle
+.gradle/
+gradle-wrapper.jar
+
+# ローカル設定（機密情報を含む可能性あり）
+local.properties
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Kotlin コンパイルキャッシュ
+.kotlin/
+
+# APK
+*.apk
+*.aab
+*.ap_
+
+# ProGuard
+proguard/
+
+# テスト結果
+test-results/
