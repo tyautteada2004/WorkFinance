@@ -1,0 +1,3 @@
+-keepattributes *Annotation*
+-keep class com.tyaut.workfinance.data.db.entity.** { *; }
+-keep class com.tyaut.workfinance.domain.enums.** { *; }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WorkFinance</string>
+    <string name="nav_dashboard">ホーム</string>
+    <string name="nav_shift">シフト</string>
+    <string name="nav_input">入力</string>
+    <string name="nav_account">口座</string>
+    <string name="nav_statistics">統計</string>
+    <string name="label_net_worth">純資産</string>
+    <string name="label_total_assets">資産合計</string>
+    <string name="label_total_liabilities">負債合計</string>
+    <string name="label_forecast_timeline">予測タイムライン（60日）</string>
+    <string name="label_deficit_warning">60日以内に残高がマイナスになる日があります</string>
+    <string name="label_consumption">消費</string>
+    <string name="label_investment">投資</string>
+    <string name="label_waste">浪費</string>
+    <string name="action_confirm">確定</string>
+    <string name="action_cancel">キャンセル</string>
+    <string name="action_save">保存</string>
+    <string name="hint_amount">金額（マイナス可）</string>
+    <string name="hint_description">メモ（任意）</string>
+    <string name="hint_payment_account">支払手段</string>
+    <string name="btn_record">記録する</string>
+</resources>

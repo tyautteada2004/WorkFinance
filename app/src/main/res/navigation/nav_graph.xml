@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.tyaut.workfinance.presentation.dashboard.DashboardFragment"
+        android:label="ダッシュボード" />
+
+    <fragment
+        android:id="@+id/shiftFragment"
+        android:name="com.tyaut.workfinance.presentation.shift.ShiftFragment"
+        android:label="シフト" />
+
+    <fragment
+        android:id="@+id/quickInputFragment"
+        android:name="com.tyaut.workfinance.presentation.transaction.QuickInputFragment"
+        android:label="入力" />
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.tyaut.workfinance.presentation.account.AccountFragment"
+        android:label="口座" />
+
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.tyaut.workfinance.presentation.statistics.StatisticsFragment"
+        android:label="統計" />
+
+    <fragment
+        android:id="@+id/workplaceFragment"
+        android:name="com.tyaut.workfinance.presentation.workplace.WorkplaceFragment"
+        android:label="勤務先設定" />
+
+</navigation>

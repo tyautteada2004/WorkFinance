@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1976D2</color>
+    <color name="colorPrimaryVariant">#1565C0</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#388E3C</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorBackground">#FAFAFA</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorError">#B00020</color>
+    <color name="colorErrorContainer">#FDECEA</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorIncome">#4CAF50</color>
+    <color name="colorExpense">#F44336</color>
+    <color name="colorConsumption">#4CAF50</color>
+    <color name="colorInvestment">#2196F3</color>
+    <color name="colorWaste">#F44336</color>
+    <color name="colorShiftScheduled">#90A4AE</color>
+    <color name="colorShiftActual">#FFA726</color>
+    <color name="colorShiftConfirmed">#66BB6A</color>
+</resources>
