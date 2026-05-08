@@ -1,11 +1,12 @@
 package com.tyaut.workfinance.presentation.dashboard
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.tyaut.workfinance.R
 import com.tyaut.workfinance.databinding.ItemForecastBinding
 import com.tyaut.workfinance.domain.model.ForecastEntry
 import com.tyaut.workfinance.util.CurrencyFormatter
@@ -24,9 +25,11 @@ class ForecastAdapter : ListAdapter<ForecastEntry, ForecastAdapter.ViewHolder>(D
             binding.tvDate.text = entry.date.format(dateFormatter)
             binding.tvDayOfWeek.text = entry.date.format(dayOfWeekFormatter)
 
+            val ctx = binding.root.context
             binding.tvBalance.text = CurrencyFormatter.format(entry.balance)
             binding.tvBalance.setTextColor(
-                if (entry.isDeficit) Color.parseColor("#B00020") else Color.parseColor("#1D1B20")
+                if (entry.isDeficit) ContextCompat.getColor(ctx, R.color.colorError)
+                else ContextCompat.getColor(ctx, R.color.colorOnSurface)
             )
 
             // 当日のイベントを「名称 ±金額」でカンマ区切り表示
@@ -36,7 +39,8 @@ class ForecastAdapter : ListAdapter<ForecastEntry, ForecastAdapter.ViewHolder>(D
 
             // 赤字予定日はカード背景を薄赤に
             binding.root.setCardBackgroundColor(
-                if (entry.isDeficit) Color.parseColor("#FDECEA") else Color.WHITE
+                if (entry.isDeficit) ContextCompat.getColor(ctx, R.color.colorErrorContainer)
+                else ContextCompat.getColor(ctx, R.color.colorSurface)
             )
         }
     }
